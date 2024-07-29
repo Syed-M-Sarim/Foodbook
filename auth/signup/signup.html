@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     /* Global styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d1c40;  /* Light gray background */
-      color: #333; /* Dark text color */
+      background-color: #1e1e1e; /* Dark background */
+      color: #e0e0e0; /* Light text color */
       margin: 0;
       padding: 0;
       display: flex;
@@ -23,9 +24,9 @@
       width: 90%; /* Adjusted width */
       max-width: 400px;
       padding: 20px;
-      background-color: #b8b5b5; /* White background */
+      background-color: #2c2c2c; /* Dark container background */
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stronger shadow */
       text-align: center;
       transition: transform 0.3s ease-in-out;
     }
@@ -37,7 +38,7 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 15px;
-      color: #eff2f5; /* Blue header color */
+      color: #4caf50; /* Green header color */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -46,7 +47,7 @@
       font-size: 0.9rem;
       font-weight: 600;
       margin-bottom: 5px;
-      color: #4a90e2; /* Blue label color */
+      color: #4caf50; /* Green label color */
       text-align: left;
     }
 
@@ -54,6 +55,7 @@
     input[type="password"],
     input[type="text"],
     input[type="tel"],
+    input[type="file"],
     button[type="submit"] {
       width: 100%;
       padding: 10px;
@@ -61,8 +63,8 @@
       margin-bottom: 15px;
       border: none;
       border-radius: 5px;
-      background-color: #f9fafb; /* Light gray background */
-      color: #333; /* Dark text color */
+      background-color: #3c3c3c; /* Dark input background */
+      color: #e0e0e0; /* Light text color */
       font-size: 0.9rem;
       transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
@@ -71,9 +73,10 @@
     input[type="password"]:focus,
     input[type="text"]:focus,
     input[type="tel"]:focus,
+    input[type="file"]:focus,
     button[type="submit"]:hover {
       outline: none;
-      background-color: #4a90e2; /* Blue background on focus/hover */
+      background-color: #4caf50; /* Green background on focus/hover */
       color: #ffffff; /* White text on focus/hover */
       box-shadow: 0 0 8px rgba(74, 144, 226, 0.3); /* Light blue shadow on focus/hover */
     }
@@ -88,68 +91,66 @@
     }
 
     .already-account a {
-      color: #4a90e2; /* Blue link color */
+      color: #4caf50; /* Green link color */
       text-decoration: none;
       transition: color 0.3s ease-in-out;
     }
 
     .already-account a:hover {
-      color: #3579b3; /* Darker blue on hover */
+      color: #45a049; /* Darker green on hover */
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <h1>Signup</h1>
     <form id="signup_form">
       <div class="relative mb-4">
-        <label for="profile" class="mb-2 block text-gray-700 text-sm font-bold">Choose Profile Picture</label>
-        <input type="file" id="profile" >
+        <label for="profile">Choose Profile Picture</label>
+        <input type="file" id="profile">
       </div>
       <div class="relative mb-4">
         <label for="floating_email">Email address</label>
-        <input type="email" name="floating_email" id="floating_email" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-blue-50 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out" required>
-        
+        <input type="email" name="floating_email" id="floating_email" placeholder="name@example.com" required>
       </div>
       <div class="relative mb-4">
         <label for="floating_password">Password</label>
-        <input type="password" name="floating_password" id="floating_password" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-yellow-50 focus:outline-none focus:border-yellow-500 transition-colors duration-300 ease-in-out" required>
-        
+        <input type="password" name="floating_password" id="floating_password" placeholder="********" required>
       </div>
       <div class="relative mb-4">
         <label for="floating_repeat_password">Confirm password</label>
-        <input type="password" name="repeat_password" id="floating_repeat_password" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-green-50 focus:outline-none focus:border-green-500 transition-colors duration-300 ease-in-out" required>
-        
+        <input type="password" name="repeat_password" id="floating_repeat_password" placeholder="********" required>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
         <div class="relative">
           <label for="floating_first_name">First name</label>
-          <input type="text" name="floating_first_name" id="floating_first_name" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-purple-50 focus:outline-none focus:border-purple-500 transition-colors duration-300 ease-in-out">
+          <input type="text" name="floating_first_name" id="floating_first_name" placeholder="John">
         </div>
         <div class="relative">
           <label for="floating_last_name">Last name</label>
-          <input type="text" name="floating_last_name" id="floating_last_name" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-pink-50 focus:outline-none focus:border-pink-500 transition-colors duration-300 ease-in-out">
+          <input type="text" name="floating_last_name" id="floating_last_name" placeholder="Doe">
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
         <div class="relative">
           <label for="floating_phone">Phone number (123-456-7890)</label>
-          <input type="tel" name="floating_phone" id="floating_phone" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-orange-50 focus:outline-none focus:border-orange-500 transition-colors duration-300 ease-in-out">
+          <input type="tel" name="floating_phone" id="floating_phone" placeholder="123-456-7890">
         </div>
         <div class="relative">
           <label for="floating_company">Company (Ex. Google)</label>
-          <input type="text" name="floating_company" id="floating_company" placeholder=" " class="block py-2 px-3 text-sm rounded-lg border-gray-300 bg-cyan-50 focus:outline-none focus:border-cyan-500 transition-colors duration-300 ease-in-out" required>
-          
+          <input type="text" name="floating_company" id="floating_company" placeholder="Google" required>
         </div>
       </div>
-      <button type="submit" id="submit_btn" class="py-2 px-4 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm transition-colors duration-300 ease-in-out">Submit</button>
+      <button type="submit" id="submit_btn" class="py-2 px-4 bg-green-700 hover:bg-green-800 text-white font-medium rounded-lg text-sm transition-colors duration-300 ease-in-out">Submit</button>
       <div class="already-account">
         <p>Already Have an Account?</p>
-        <a href="../login/login.html" class="text-blue-700 hover:text-blue-800 transition-colors duration-300 ease-in-out">Login</a>
+        <a href="../login/login.html" class="text-green-700 hover:text-green-800 transition-colors duration-300 ease-in-out">Login</a>
       </div>
     </form>
   </div>
-<script src="./signup.js" type="module"></script>
+  <script src="./signup.js" type="module"></script>
 </body>
+
 </html>

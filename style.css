@@ -1,14 +1,14 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f4f6; /* Light gray background */
-  color: #333; /* Dark text color */
+  background-color: #1e1e1e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: #4a90e2; /* Blue navbar background */
-  border-bottom: 1px solid #ddd; /* Light border */
+  background-color: #333333; /* Darker navbar background */
+  border-bottom: 1px solid #555; /* Slightly darker border */
 }
 
 .navbar a {
@@ -18,7 +18,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #f0f0f0; /* Lighter text on hover */
+  color: #bbbbbb; /* Lighter text on hover */
 }
 
 .navbar img {
@@ -26,7 +26,7 @@ body {
 }
 
 .secondary-nav {
-  background-color: #ffffff; /* White secondary nav background */
+  background-color: #2c2c2c; /* Dark secondary nav background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
@@ -40,13 +40,13 @@ body {
 }
 
 .secondary-nav a {
-  color: #4a90e2; /* Blue link color */
+  color: #ffffff; /* White link color */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 .secondary-nav a:hover {
-  color: #3579b3; /* Darker blue on hover */
+  color: #bbbbbb; /* Lighter white on hover */
 }
 
 .container {
@@ -56,8 +56,8 @@ body {
 }
 
 .event-card {
-  background-color: #ffffff; /* White card background */
-  border: 1px solid #ddd; /* Light border */
+  background-color: #2c2c2c; /* Dark card background */
+  border: 1px solid #555; /* Slightly darker border */
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -66,11 +66,11 @@ body {
 .event-card h2 {
   margin-top: 0;
   font-size: 1.2rem;
-  color: #333; /* Dark text color */
+  color: #e0e0e0; /* Light text color */
 }
 
 .event-card p {
-  color: #666; /* Gray text color */
+  color: #bbbbbb; /* Gray text color */
 }
 
 .logout-btn {
