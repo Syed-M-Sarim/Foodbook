@@ -27,19 +27,19 @@ event_form.addEventListener("submit", (e) => {
     creaByEmail: auth.currentUser.email,
     Likes:[]
   };
-  console.log("event Info", eventInfo);
+  console.log(eventInfo);
 
   const imgRef = ref(storage, eventInfo.banner.name);
   uploadBytes(imgRef, eventInfo.banner).then(() => {
-    console.log("upload ho gayi");
+    console.log("uploaded");
     getDownloadURL(imgRef).then((url) => {
-      console.log("url Aa gya",url);
+      console.log("url received",url);
       eventInfo.banner = url;
 
       // adding Documents
       const eventCollection=collection(db,"events");
       addDoc(eventCollection,eventInfo).then((doc)=>{
-        console.log("document Added");
+        console.log("Document added");
         window.location.href='../index.html'
       })
     });

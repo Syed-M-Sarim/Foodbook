@@ -55,20 +55,20 @@ signup_btn.addEventListener("submit", (e) => {
               const userDbref = doc(db, "user", user.user.uid);
 
               setDoc(userDbref, userInfo).then(() => {
-                console.log("user updated to DB");
+                console.log("user updated on DB");
                 window.location.href = "/";
                 submit_btn.disabled = false;
                 submit_btn.innerText = "submit";
               });
             })
             .catch((err) => {
-              console.log("url nh hai");
+              console.log("url not found");
               submit_btn.disabled = false;
               submit_btn.innerText = "submit";
             });
         })
         .catch(() => {
-          console.log("error in uploading image");
+          console.log("error in image uploading");
           submit_btn.disabled = false;
           submit_btn.innerText = "submit";
         });

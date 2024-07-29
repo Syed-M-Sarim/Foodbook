@@ -52,8 +52,8 @@ logout_btn.addEventListener("click", () => {
 function getUserInfo(uid) {
   const userRef = doc(db, "user", uid);
   getDoc(userRef).then((data) => {
-    console.log("data=>", data.id);
-    console.log("data=>", data.data);
+    console.log(data.id);
+    console.log(data.data);
     user_img.src = data.data()?.img;
   });
 }
@@ -65,7 +65,7 @@ async function GetAllevents() {
     querySnapshot.forEach((doc) => {
       // console.log(`${doc.id} => ${doc.data()}`);
       const event = doc.data();
-      console.log("event=>", event);
+      console.log(event);
       const { banner, location, title, creaByEmail, desc, date, time } = event;
       const card = `<div class="bg-white overflow-hidden border border-gray-200 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
   <img src="${banner}" class="w-full h-56 object-cover rounded-t-lg" alt="${title}">
@@ -102,7 +102,7 @@ async function GetAllevents() {
 `;
     window.likeEvent = likeEvent;
       events_cards_container.innerHTML += card;
-      console.log("event", event);
+      console.log(event);
     });
   } catch (err) {
     alert(err);
